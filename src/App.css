@@ -1,0 +1,61 @@
+/* FIle Name is App.css */
+
+/* FinTrack — App Styles */
+
+/* ── Scrollbar ─────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: #f1f5f9; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+/* ── Animations ────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes pulseRing {
+  0%   { box-shadow: 0 0 0 0   rgba(59,130,246,0.35); }
+  70%  { box-shadow: 0 0 0 8px rgba(59,130,246,0); }
+  100% { box-shadow: 0 0 0 0   rgba(59,130,246,0); }
+}
+
+.animate-fade-up  { animation: fadeUp 0.4s ease both; }
+.animate-fade-in  { animation: fadeIn 0.3s ease both; }
+
+.stagger-1 { animation-delay: 0.04s; }
+.stagger-2 { animation-delay: 0.10s; }
+.stagger-3 { animation-delay: 0.16s; }
+.stagger-4 { animation-delay: 0.22s; }
+
+/* ── Summary Card hover ─────────────────────────── */
+.summary-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.summary-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px -8px rgba(0,0,0,0.15);
+}
+
+/* ── Table row hover ────────────────────────────── */
+.tx-row { transition: background 0.12s ease; }
+.tx-row:hover { background: #eff6ff !important; }
+
+/* ── Print ──────────────────────────────────────── */
+@media print {
+  aside, header, .no-print { display: none !important; }
+  .ml-64 { margin-left: 0 !important; }
+}
+
+/* ── Mobile: hide sidebar, remove margin ────────── */
+@media (max-width: 768px) {
+  aside { display: none; }
+  .ml-64 { margin-left: 0 !important; }
+}
+
+
+
+

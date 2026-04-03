@@ -1,0 +1,62 @@
+@import "tailwindcss";
+ 
+:root {
+  --font-display: 'Sora', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --blue: #3b57f6;
+  --violet: #7c3aed;
+  --emerald: #10b981;
+  --rose: #f43f5e;
+}
+ 
+*, *::before, *::after { box-sizing: border-box; }
+ 
+body {
+  margin: 0;
+  font-family: var(--font-body), 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: #f8fafc;
+  color: #1e293b;
+}
+ 
+h1, h2, h3, h4 {
+  font-family: var(--font-display), 'Sora', sans-serif;
+  margin: 0;
+}
+ 
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: #f1f5f9; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 99px; }
+ 
+/* Animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+ 
+.animate-fade-up { animation: fadeUp 0.4s ease both; }
+.animate-fade-in { animation: fadeIn 0.3s ease both; }
+.stagger-1 { animation-delay: 0.05s; }
+.stagger-2 { animation-delay: 0.12s; }
+.stagger-3 { animation-delay: 0.19s; }
+.stagger-4 { animation-delay: 0.26s; }
+ 
+/* Summary card hover */
+.summary-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: default;
+}
+.summary-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -10px rgba(0,0,0,0.2) !important;
+}
+ 
+/* Table row hover */
+.tx-row { transition: background 0.12s ease; }
+.tx-row:hover { background: #eff6ff !important; }
+ 
