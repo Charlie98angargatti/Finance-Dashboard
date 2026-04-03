@@ -57,6 +57,10 @@ src/
 │   ├── TransactionTable.jsx # Transaction list with search/sort
 │   ├── Insights.jsx        # Financial insights display
 │   └── RoleSelector.jsx    # Role switching component
+├── Layout/
+    ├──Sidebar.jsx
+    ├──Navbar.jsx
+    ├──layout.jsx 
 ├── assets/
 └── public/
 ```
